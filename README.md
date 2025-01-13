@@ -25,8 +25,7 @@ CREATE TABLE Patients (
     
     Address TEXT,
     
-    RegistrationDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    
+    RegistrationDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP   
 );
 
 
@@ -48,8 +47,7 @@ CREATE TABLE Doctors (
     
     Address TEXT,
     
-    JoiningDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    
+    JoiningDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP    
 );
 
 
@@ -70,8 +68,7 @@ CREATE TABLE Appointments (
     
     FOREIGN KEY (PatientID) REFERENCES Patients(PatientID),
     
-    FOREIGN KEY (DoctorID) REFERENCES Doctors(DoctorID)
-    
+    FOREIGN KEY (DoctorID) REFERENCES Doctors(DoctorID)    
 );
 
 for billing information
@@ -91,8 +88,7 @@ CREATE TABLE Billing (
     
     FOREIGN KEY (PatientID) REFERENCES Patients(PatientID),
     
-    FOREIGN KEY (AppointmentID) REFERENCES Appointments(AppointmentID)
-    
+    FOREIGN KEY (AppointmentID) REFERENCES Appointments(AppointmentID)  
 );
 
 
@@ -117,7 +113,6 @@ CREATE TABLE Medications (
     
     FOREIGN KEY (PatientID) REFERENCES Patients(PatientID),
     
-    FOREIGN KEY (DoctorID) REFERENCES Doctors(DoctorID)
-    
+    FOREIGN KEY (DoctorID) REFERENCES Doctors(DoctorID)  
 );
 
