@@ -116,3 +116,8 @@ CREATE TABLE Medications (
     FOREIGN KEY (DoctorID) REFERENCES Doctors(DoctorID)  
 );
 
+
+
+
+
+
